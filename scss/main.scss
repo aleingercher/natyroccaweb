@@ -6,12 +6,29 @@
 	box-sizing: border-box;
 }
 
+body {
+	scrollbar-width: thin; /* "auto" or "thin" */
+	scrollbar-color: blue orange; /* scroll thumb and track */
+
+	&::-webkit-scrollbar {
+		width: 14px; /* width of the entire scrollbar */
+	}
+
+	&::-webkit-scrollbar-track {
+		background: white; /* color of the tracking area */
+	}
+
+	&::-webkit-scrollbar-thumb {
+		background-color: #675544; /* color of the scroll thumb */
+	}
+}
+
 /* HELPERS */
 
 .fc {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
 body {
@@ -23,21 +40,19 @@ body {
 }
 
 nav {
-    // background: url('../img/menu.jpg');
-    background-color: whitesmoke;
+	// background: url('../img/menu.jpg');
+	background-color: whitesmoke;
 	color: black;
-    cursor: pointer;
+	cursor: pointer;
 	font-size: 1.6rem;
 	height: 40px;
 	position: fixed;
 	left: 5px;
-    text-align: center;
+	text-align: center;
 	// top: -100%;
 	top: 5px;
 	width: 120px;
 	z-index: 100;
-
-    
 }
 
 .hero {
@@ -69,7 +84,7 @@ nav {
 	.button {
 		overflow: hidden;
 		position: relative;
-        max-height: 50vh;
+		max-height: 50vh;
 
 		img {
 			display: block;

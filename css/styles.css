@@ -4,6 +4,21 @@
   padding: 0;
   box-sizing: border-box; }
 
+body {
+  scrollbar-width: thin;
+  /* "auto" or "thin" */
+  scrollbar-color: blue orange;
+  /* scroll thumb and track */ }
+  body::-webkit-scrollbar {
+    width: 14px;
+    /* width of the entire scrollbar */ }
+  body::-webkit-scrollbar-track {
+    background: white;
+    /* color of the tracking area */ }
+  body::-webkit-scrollbar-thumb {
+    background-color: #675544;
+    /* color of the scroll thumb */ }
+
 /* HELPERS */
 .fc {
   display: flex;
