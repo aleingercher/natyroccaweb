@@ -1,115 +1,157 @@
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-	scrollbar-width: thin; /* "auto" or "thin" */
-	scrollbar-color: blue orange; /* scroll thumb and track */
+  scrollbar-width: thin; /* "auto" or "thin" */
+  scrollbar-color: blue orange; /* scroll thumb and track */
 
-	&::-webkit-scrollbar {
-		width: 14px; /* width of the entire scrollbar */
-	}
+  &::-webkit-scrollbar {
+    width: 14px; /* width of the entire scrollbar */
+  }
 
-	&::-webkit-scrollbar-track {
-		background: white; /* color of the tracking area */
-	}
+  &::-webkit-scrollbar-track {
+    background: white; /* color of the tracking area */
+  }
 
-	&::-webkit-scrollbar-thumb {
-		background-color: #675544; /* color of the scroll thumb */
-	}
+  &::-webkit-scrollbar-thumb {
+    background-color: #675544; /* color of the scroll thumb */
+  }
 }
 
 /* HELPERS */
 
 .fc {
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 body {
-	font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
 }
 
 .main {
-	width: 100%;
+  width: 100%;
 }
 
-nav {
-	// background: url('../img/menu.jpg');
-	background-color: whitesmoke;
-	color: black;
-	cursor: pointer;
-	font-size: 1.6rem;
-	height: 40px;
-	position: fixed;
-	left: 5px;
-	text-align: center;
-	// top: -100%;
-	top: 5px;
-	width: 120px;
-	z-index: 100;
+.menu {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  left: 5px;
+  opacity: 0;
+  position: fixed;
+  top: 5px;
+  transition: all 0.3s ease-in-out;
+  z-index: 100;
+}
+
+.hamburguesa {
+  align-self: flex-start;
+  background-color: white;
+  cursor: pointer;
+  font-size: 1.6rem;
+  height: 40px;
+  text-align: center;
+  width: 256.58px;
+  z-index: 1;
+}
+
+.links {
+  background-color: white;
+  font-size: 2rem;
+  height: 50vh;
+  opacity: 0;
+  padding: 10px 50px;
+  transform: translateX(-110%);
+  transition: all 0.3s ease-in-out;
+
+  ul {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+.whiteLetters {
+	color: white;
+}
+
+.show {
+  opacity: 1;
+  transform: translateX(0);
 }
 
 .hero {
-	min-height: 100vh;
-	background-image: url('../img/hero.jpg');
-	background-size: cover;
-	background-repeat: no-repeat;
-	background-position: center;
-	position: relative;
-	max-width: 100vw;
+  min-height: 100vh;
+  background-image: url("../img/hero.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+  max-width: 100vw;
 
-	h1 {
-		color: white;
-		font-size: 3rem;
-		font-weight: 100;
-		letter-spacing: 3px;
-		left: 5%;
-		position: absolute;
-		top: 10%;
-	}
+  h1 {
+    color: white;
+    font-size: 3rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+    left: 5%;
+    position: absolute;
+    top: 10%;
+  }
 }
 
 .buttons {
-	color: white;
-	display: grid;
-	font-weight: 300;
-	grid-template-columns: 1fr 1fr;
+  color: white;
+  display: grid;
+  font-weight: 300;
+  grid-template-columns: 1fr 1fr;
 
-	.button {
-		overflow: hidden;
-		position: relative;
-		max-height: 50vh;
+  .button {
+    overflow: hidden;
+    position: relative;
+    max-height: 50vh;
 
-		img {
-			display: block;
-			object-fit: cover;
-			width: 100%;
-		}
+    img {
+      display: block;
+      object-fit: cover;
+      width: 100%;
+    }
 
-		p {
-			font-size: 2rem;
-			left: 50%;
-			opacity: 0;
-			position: absolute;
-			top: 50%;
-			transform: translate(-50%, 70%);
-			transition: all 0.5s ease-in;
-		}
+    p {
+      font-size: 2rem;
+      left: 50%;
+      opacity: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, 70%);
+      transition: all 0.5s ease-in;
+    }
 
-		&:hover p {
-			transition: all 0.8s ease-out;
-			transform: translate(-50%, 50%);
-			opacity: 1;
-		}
+    &:hover p {
+      transition: all 0.8s ease-out;
+      transform: translate(-50%, 50%);
+      opacity: 1;
+    }
 
-		&:nth-child(2) {
-			color: #503325;
-		}
-	}
+    &:nth-child(2) {
+      color: #503325;
+    }
+  }
 }
