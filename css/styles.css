@@ -31,6 +31,7 @@ body {
 .main {
   width: 100%; }
 
+/*                NAV                 */
 .menu {
   color: black;
   display: flex;
@@ -44,16 +45,20 @@ body {
 
 .hamburguesa {
   align-self: flex-start;
-  background-color: white;
+  background: url("../img/menu_bg.png");
   cursor: pointer;
   font-size: 1.6rem;
   height: 40px;
   text-align: center;
   width: 256.58px;
-  z-index: 1; }
+  z-index: 1;
+  letter-spacing: 5px; }
+
+.menu, .hamburguesa :not(p) {
+  opacity: 0.3; }
 
 .links {
-  background-color: white;
+  background: url("../img/menu_bg.png");
   font-size: 2rem;
   height: 50vh;
   opacity: 0;
@@ -72,12 +77,13 @@ body {
     text-decoration: none; }
 
 .whiteLetters {
-  color: white; }
+  color: transparent; }
 
 .show {
   opacity: 1;
   transform: translateX(0); }
 
+/*                HERO                 */
 .hero {
   min-height: 100vh;
   background-image: url("../img/hero.jpg");
@@ -95,11 +101,14 @@ body {
     position: absolute;
     top: 10%; }
 
+/*                botonera                 */
 .buttons {
   color: white;
   display: grid;
   font-weight: 300;
   grid-template-columns: 1fr 1fr; }
+  .buttons :last-child {
+    grid-column: span 2; }
   .buttons .button {
     overflow: hidden;
     position: relative;
@@ -107,6 +116,7 @@ body {
     .buttons .button img {
       display: block;
       object-fit: cover;
+      outline: none;
       width: 100%; }
     .buttons .button p {
       font-size: 2rem;
