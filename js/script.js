@@ -2,7 +2,7 @@
 const menu = document.querySelector(".menu");
 const hamburguesa = document.querySelector(".hamburguesa");
 const hamburguesaButton = document.querySelector(".hamburguesa > p");
-const nav = document.querySelector(".nav");
+const nav = document.querySelector("#nav");
 const links = document.querySelectorAll(".nav > ul > li");
 
 window.addEventListener("DOMContentLoaded", (event) => {
@@ -12,7 +12,10 @@ window.addEventListener("DOMContentLoaded", (event) => {
 const showMenuButton = () => {
   menu.style.top = "25px";
   menu.style.opacity = "1";
-  hamburguesa.classList.remove("hideLetters");
+
+  if (!nav.className.includes("show")) {
+    hamburguesa.classList.remove("hideLetters");
+  }
 };
 const hideMenuButton = () => {
   menu.style.top = "-100%";
@@ -22,8 +25,14 @@ const hideMenuButton = () => {
 console.log("links", links);
 
 document.addEventListener("click", (e) => {
-  if (!(e.target.id == 'nav' || e.target.isEqualNode(hamburguesaButton) || e.target.id == 'hamburguesa')) {
-    hideMenuButton()
+  if (
+    !(
+      e.target.id == "nav" ||
+      e.target.isEqualNode(hamburguesaButton) ||
+      e.target.id == "hamburguesa"
+    )
+  ) {
+    hideMenuButton();
     nav.classList.remove("show");
   }
 
