@@ -26,7 +26,7 @@ body {
   align-items: center; }
 
 body {
-  font-family: "Cormorant Garamond", serif; }
+  font-family: 'Cormorant Garamond', serif; }
 
 .main {
   width: 100%; }
@@ -57,7 +57,8 @@ body {
   z-index: 1;
   letter-spacing: 5px; }
 
-.menu, .hamburguesa :not(p) {
+.menu,
+.hamburguesa :not(p) {
   opacity: 0.3; }
 
 .nav {
@@ -137,22 +138,25 @@ body {
     .buttons .button:nth-child(2) {
       color: #503325; }
 
-@media screen and (max-width: 640px) {
-  .buttons {
-    grid-template-columns: 1fr; }
-    .buttons :last-child {
-      grid-column: span 1; }
-  .hamburguesa {
-    width: min-content;
-    padding: 0 5px; } }
+/* Estilos generales para las secciones */
+.section {
+  margin-bottom: 40px; }
+
+.cabecera {
+  width: 100%;
+  max-height: 80vh;
+  object-fit: cover;
+  object-position: center;
+  overflow: hidden; }
 
 .frase {
-  min-height: 150px; }
+  min-height: 150px;
+  padding: 30px 20vw; }
   .frase p {
     font-size: 1.7rem;
-    padding: 30px 20vw;
     text-align: center; }
 
+/*     *********  TINTES  ****************/
 .fotosTintes {
   display: grid;
   grid-template-columns: 6fr 1fr 7fr;
@@ -174,17 +178,12 @@ body {
     grid-column: 2/4;
     object-fit: contain; }
 
-.cabecera {
-  width: 100%;
-  max-height: 80vh;
-  object-fit: cover;
-  object-position: center; }
-
+/*     *********  TINTES  ****************/
 .fotosMuniecos {
   width: 100%;
   display: grid;
   grid-template-columns: 40px 40px auto 25px 70px 100px auto 30px 40px;
-  grid-template-rows: 20px 1fr auto 50px 100px 40px auto minmax(30px, auto) 40px 20px; }
+  grid-template-rows: 20px 1fr auto 50px 100px 40px auto minmax(30px, auto) 40px auto; }
   .fotosMuniecos img {
     object-fit: cover;
     width: 100%; }
@@ -205,4 +204,20 @@ body {
     grid-row: 10/11; }
   .fotosMuniecos :nth-child(6) {
     grid-column: 7/9;
-    grid-row: 9; }
+    grid-row: 9/11; }
+
+/*     *********  TINTES  ****************/
+.fotosTextiles {
+  margin: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 20px auto 40px auto 1fr 1fr 20px auto 1fr;
+  width: 100%; }
+
+@media screen and (max-width: 640px) {
+  .buttons {
+    grid-template-columns: 1fr; }
+    .buttons :last-child {
+      grid-column: span 1; }
+  .hamburguesa {
+    width: min-content;
+    padding: 0 5px; } }
