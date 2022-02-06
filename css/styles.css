@@ -210,8 +210,7 @@ body {
 .fotosTextiles {
   padding: 0 40px 30px;
   display: grid;
-  grid-template: "   .   foto1 foto1 foto1 foto1   .     .   foto2 foto2   .   " auto "   .     .     .     .     .     .     .   foto2 foto2   .   " 50px "   .     .     .     .   foto4 foto4   .   foto2 foto2   .   " 40px " foto3 foto3 foto3   .   foto4 foto4   .     .     .     .   " 60px " foto3 foto3 foto3   .   foto4 foto4   .     .   foto5 foto5 " auto "   .     .     .     .   foto4 foto4   .     .   foto5 foto5 " 40px "   .     .     .     .     .     .     .     .   foto5 foto5 " 70px "   .     .   foto6 foto6 foto6   .     .     .     .     .   " 70px "   .     .   foto6 foto6 foto6   .   foto7 foto7 foto7 foto7 " auto/70px 60px 3fr 80px 2fr 60px 60px 40px 4fr 40px;
-  width: 100%; }
+  grid-template: "   .   foto1 foto1 foto1 foto1   .     .   foto2 foto2   .   " auto "   .     .     .     .     .     .     .   foto2 foto2   .   " 50px "   .     .     .     .   foto4 foto4   .   foto2 foto2   .   " 40px " foto3 foto3 foto3   .   foto4 foto4   .     .     .     .   " 60px " foto3 foto3 foto3   .   foto4 foto4   .     .   foto5 foto5 " auto "   .     .     .     .   foto4 foto4   .     .   foto5 foto5 " 40px "   .     .     .     .     .     .     .     .   foto5 foto5 " 70px "   .     .   foto6 foto6 foto6   .     .     .     .     .   " 70px "   .     .   foto6 foto6 foto6   .   foto7 foto7 foto7 foto7 " auto/70px 60px 3fr 80px 2fr 60px 60px 40px 4fr 40px; }
   .fotosTextiles img {
     object-fit: cover;
     width: 100%;
@@ -243,3 +242,9 @@ body {
   .hamburguesa {
     width: min-content;
     padding: 0 5px; } }
+
+@media (min-width: 1200px) {
+  .fotosTextiles,
+  .fotosMuniecos {
+    width: 70%;
+    margin: 0 auto; } }
