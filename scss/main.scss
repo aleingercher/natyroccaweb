@@ -203,6 +203,16 @@ body {
 	}
 }
 
+.frase-izq {
+	width: 80%;
+	margin: auto;
+	min-height: 150px;
+	padding: 70px 0;
+
+	p {
+		font-size: 1.7rem;
+	}
+}
 /*     *********  TINTES  ****************/
 
 .fotosTintes {
@@ -322,6 +332,36 @@ body {
 
 	
 }
+
+/*     *********  BROCHES  ****************/
+
+.fotosBroches {
+	width: 80%;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	
+	img {
+		aspect-ratio: 1;
+		object-fit: cover;
+		width: 100%;
+		height: 100%;
+		cursor: pointer;
+	}
+
+	:first-child {
+		object-position: left;
+	}
+	
+	:nth-child(2) {
+		border-radius: 0 40px 0 0;
+		
+	}
+
+	
+	
+}
+
 
 @media screen and (max-width: 640px) {
 	.buttons {
