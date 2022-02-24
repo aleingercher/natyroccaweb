@@ -2,7 +2,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  scroll-behavior: smooth; }
 
 body {
   scrollbar-width: thin;
@@ -24,6 +25,33 @@ body {
   display: flex;
   justify-content: center;
   align-items: center; }
+
+/* BACK TO TOP BUTTON */
+#backToTopButton {
+  background-color: transparent;
+  opacity: 0;
+  position: fixed;
+  /* Fixed/sticky position */
+  bottom: 20px;
+  /* Place the button at the bottom of the page */
+  right: 30px;
+  /* Place the button 30px from the right */
+  z-index: 99;
+  /* Make sure it does not overlap */
+  border: none;
+  /* Remove borders */
+  outline: none;
+  /* Remove outline */
+  cursor: pointer;
+  /* Add a mouse pointer on hover */
+  padding: 10px;
+  /* Some padding */
+  font-size: 18px;
+  /* Increase font size */
+  transition: opacity 0.3s ease-in-out; }
+  #backToTopButton img {
+    width: 30px;
+    height: 30px; }
 
 body {
   font-family: 'Cormorant Garamond', serif; }
@@ -119,7 +147,7 @@ body {
   .buttons .button {
     overflow: hidden;
     position: relative;
-    max-height: 50vh; }
+    max-height: 70vh; }
     .buttons .button img {
       display: block;
       width: 100%; }
@@ -135,8 +163,12 @@ body {
       transition: all 0.8s ease-out;
       transform: translate(-50%, 50%);
       opacity: 1; }
-    .buttons .button:nth-child(2) {
+    .buttons .button:nth-child(3) {
       color: #503325; }
+      .buttons .button:nth-child(3):hover p {
+        transition: all 0.8s ease-out;
+        transform: translate(-50%, 70%);
+        opacity: 1; }
 
 /* Estilos generales para las secciones */
 .section {
@@ -245,7 +277,7 @@ body {
 /*     *********  BROCHES  ****************/
 .fotosBroches {
   width: 80%;
-  margin: 0 auto;
+  margin: 0 auto 40px;
   display: grid;
   grid-template-columns: 1fr 1fr; }
   .fotosBroches img {
@@ -258,6 +290,8 @@ body {
     object-position: left; }
   .fotosBroches :nth-child(2) {
     border-radius: 0 40px 0 0; }
+  .fotosBroches :nth-child(5) {
+    object-position: right; }
 
 @media screen and (max-width: 640px) {
   .buttons {
