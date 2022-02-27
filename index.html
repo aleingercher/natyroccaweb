@@ -4,13 +4,18 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- mis estilos -->
     <link rel="stylesheet" href="./css/styles.css" />
     <title>natyrocca</title>
   </head>
 
   <body>
-      <!-- back to top button -->
-      <a onclick="topFunction()" id="backToTopButton" title="Go to top"><img src="./img/recursos/triangle-up.ico"></img></a>
+    <!-- back to top button -->
+    <a onclick="topFunction()" id="backToTopButton" title="Go to top">
+      <img src="./img/recursos/triangle-up.ico" />
+    </a>
+
     <nav class="menu fc show">
       <div class="hamburguesa fc" id="hamburguesa">
         <p>menú</p>
@@ -20,9 +25,9 @@
           <li><a href="#textiles">textiles</a></li>
           <li><a href="#muniecos">muñecos</a></li>
           <li><a href="#ilustraciones">ilustraciones</a></li>
-          <li><a href="#ilustraciones">broches</a></li>
-          <li><a href="#ilustraciones">tintes naturales</a></li>
-          <li><a href="#ilustraciones">bio</a></li>
+          <li><a href="#broches">broches</a></li>
+          <li><a href="#tintes">tintes naturales</a></li>
+          <li><a href="#bio">bio</a></li>
           <li>
             <a href="https://www.unfruto.com.ar/" target="_blank"
               >tienda FRUTO</a
@@ -35,43 +40,102 @@
       <header class="hero">
         <h1>natalia rocca</h1>
       </header>
+
       <!-- botones -->
       <div class="buttons">
         <div class="button">
-          <a href="#textiles"
-            ><img src="./img/botonera/button-textiles.jpg" alt=""
-          /></a>
+          <a href="#textiles">
+            <img src="./img/botonera/button-textiles.jpg" alt="" />
+          </a>
           <p>textiles</p>
         </div>
-        <div class="button">
-          <a href="#muniecos"
-            ><img src="./img/botonera/button-fruto.jpg" alt=""
-          /></a>
 
+        <div class="button">
+          <a href="#muniecos">
+            <img src="./img/botonera/button-fruto.jpg" alt="" />
+          </a>
           <p>muñecos</p>
         </div>
+
         <div class="button">
-          <a href="#ilustraciones"></a>
-          <img src="./img/botonera/button-ilustraciones.jpg" alt="" />
+          <a href="#ilustraciones">
+            <img src="./img/botonera/button-ilustraciones.jpg" alt="" />
+          </a>
           <p>ilustraciones</p>
         </div>
+
         <div class="button">
           <a href="#broches">
             <img src="./img/botonera/button-broches.jpg" alt="" />
           </a>
-
           <p>broches</p>
         </div>
+
         <div class="button">
           <img src="./img/botonera/button-tintes.jpg" alt="" />
           <p>tintes naturales</p>
         </div>
-        <!-- texto tintes -->
       </div>
+
+      <!-- TINTES NATURALES -->
       <div id="tintes">
+        <div class="carousel carousel__fade">
+          <div class="carousel_inner">
+            <div class="carousel_item carousel_item__active">
+              <img
+                src="./img/tintes/carrouseltintes1.jpg"
+                alt=""
+                class="carousel_img"
+              />
+              <div class="carousel_caption">
+                <!-- <h1 class="carousel_title">Change It As You See Fit</h1> -->
+                <p class="carousel_description">
+                  Conectar con la naturaleza, <br />
+                  sus tiempos, formas y aromas,<br />
+                  me ayuda a estar en el presente <br />y a disfrutar de los
+                  momentos simples
+                </p>
+              </div>
+            </div>
+            <div class="carousel_item">
+              <img
+                src="./img/tintes/carrouseltintes2.jpg"
+                alt=""
+                class="carousel_img"
+              />
+              <div class="carousel_caption">
+                <!-- <h1 class="carousel_title">Change It As You See Fit</h1> -->
+                <p class="carousel_description">
+                  Conectar con la naturaleza, <br />
+                  sus tiempos, formas y aromas,<br />
+                  me ayuda a estar en el presente <br />y a disfrutar de los
+                  momentos simples
+                </p>
+              </div>
+            </div>
+            <div class="carousel_item">
+              <img
+                src="./img/tintes/carrouseltintes3.jpg"
+                alt=""
+                class="carousel_img"
+              />
+              
+            </div>
+            <div class="carousel_item">
+              <img
+                src="./img/tintes/carrouseltintes4.jpg"
+                alt=""
+                class="carousel_img"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- <div id="tintes">
         <div class="frase fc">
           <p>
-            Conectar con la naturaleza, sus tiempos formas y olores, me ayuda a
+            Conectar con la naturaleza, sus tiempos, formas y aromas, me ayuda a
             estar en el presente y a disfrutar de los momentos simples
           </p>
         </div>
@@ -81,7 +145,7 @@
           <img src="./img/tintes/tintes-1.jpg" alt="" />
           <img src="./img/tintes/tintes-2.jpg" alt="" />
         </div>
-      </div>
+      </div> -->
       <!-- muniecos -->
       <div id="muniecos" class="section">
         <img class="cabecera" src="./img/fruto/muniecos-cabecera.jpg" alt="" />
@@ -100,6 +164,7 @@
           <img src="./img/fruto/muniecos-4.jpg" alt="" />
         </div>
       </div>
+
       <div id="textiles">
         <img
           class="cabecera"
@@ -123,6 +188,7 @@
           <img src="./img/textiles/textiles-7.jpg" alt="" />
         </div>
       </div>
+
       <div id="broches">
         <img class="cabecera" src="./img/broches/broches-cabecera.jpg" alt="" />
         <div>
@@ -143,7 +209,37 @@
           <img src="./img/broches/broches-4.jpg" alt="" />
         </div>
       </div>
+
+      <div id="bio">
+        <div class="bio_left">
+          <p class="bio_left_top"><span>Soy Naty</span><br>
+            Estos son mis trabajos, mis pasiones y mi inspiración. <br>
+            Estoy en un camino de búsqueda constante. <br>
+            Cada vez mas enfocada a mi deseo. <br>
+            Mi recorrido fue variado. <br>
+            Trabajé muchos añnos en publicidad y cine, <br>
+            en las áreas de producción y vestuario. <br>
+            Estudié joyería y cincelado. <br>
+            Hace ocho años me interesé fuertemente en los textiles <br>
+            Fue en este período cuando descubrí <br>
+            el mundo de los tintes naturales y quedé fascinada por sus colores. <br>
+            Desde ese momento se convirtió en el eje principal de mi trabajo. <br>
+            Sigo explorando esta técnica ancestral <br>
+            y llevo a cabo mi proyecto <a class="link'fruto" href="">FRUTO</a>
+          </p>
+          <div class="bio_left_bottom">
+            <a href="http://www.unfruto.com.ar"><h2>Tienda FRUTO</h2></a>
+            <img src="./img/bio/ramita.png" alt="">
+          </div>
+        </div>
+        <img class="bio_right" src="./img/bio/bio.jpeg" alt="">
+      </div>
+      
     </main>
+
+    <!-- mis funciones -->
     <script src="./js/script.js"></script>
+    <!-- carousel -->
+    <script src="./js/carousel.js"></script>
   </body>
 </html>
