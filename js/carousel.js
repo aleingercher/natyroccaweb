@@ -11,7 +11,7 @@
 const autoSlide = ()=> {
   setInterval(() => {
      slide(getItemActiveIndex() + 1);
-  }, 6000); // slide speed = 6s
+  }, 4000); // slide speed = 4s
 }
 
 const slide = (toIndex)=> {
