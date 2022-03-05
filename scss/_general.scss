@@ -8,22 +8,28 @@
 
 a {
     text-decoration: none;
+	color: inherit;
 }
 
 body {
+	font-family: 'Cormorant Garamond', serif;
+
 	scrollbar-width: thin; /* "auto" or "thin" */
-	scrollbar-color: blue orange; /* scroll thumb and track */
 
 	&::-webkit-scrollbar {
-		width: 14px; /* width of the entire scrollbar */
+		width: 11px; /* width of the entire scrollbar */
 	}
-
+	
 	&::-webkit-scrollbar-track {
+		// border: 1px solid black;
 		background: white; /* color of the tracking area */
 	}
 
 	&::-webkit-scrollbar-thumb {
 		background-color: #675544; /* color of the scroll thumb */
+	}
+
+	&::-webkit-scrollbar-border {
 	}
 }
 
@@ -33,6 +39,12 @@ body {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+/*  tipografia FRUTO */
+.fruto {
+	font-family: 'Futura-Normal', arial;
+	color: #111111;
 }
 
 /* BACK TO TOP BUTTON */
@@ -61,10 +73,6 @@ body {
 //   #backToTopButton:hover {
 // 	background-color: rgb(109, 34, 34); /* Add a dark-grey background on hover */
 //   }
-
-body {
-	font-family: 'Cormorant Garamond', serif;
-}
 
 .main {
 	width: 100%;
@@ -209,9 +217,7 @@ body {
 			color: #503325;
 
 			&:hover p {
-				transition: all 0.8s ease-out;
-				transform: translate(-50%, 70%);
-				opacity: 1;
+				transform: translate(-50%, 100%);
 			}
 		}
 	}
@@ -266,6 +272,7 @@ body {
 	}
 
 	.textiles-principal {
+		height: 100%;
 		grid-area: span 2 / span 2;
 	}
 }
@@ -395,20 +402,18 @@ body {
 #bio {
 	align-items: top;
     display: flex;
-    height: 80vh;
+    min-height: 80vh;
 	margin: 0 auto 40px;
 	width: 80%;
     
     .bio_left {
         width: 65%;
-        height: 100%;
         display: flex;
         flex-direction: column;
+		justify-content: space-between;
 
         .bio_left_top {
-            height: 70%;
-            margin-left: 40px;
-            font-size: 1.5rem;
+            font-size: 1.3rem;
 
             span {
                 font-size: 1.9rem;
@@ -416,10 +421,17 @@ body {
             }
         }
         .bio_left_bottom {
-            height: 30%;
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+			margin-right: 103px;
+
+			a {
+				margin-bottom: 10px;
+			}
 
             img {
-                height: 60%;
+                max-height: 10rem;
             }
         }
     }
