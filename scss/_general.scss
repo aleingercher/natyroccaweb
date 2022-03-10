@@ -369,7 +369,7 @@ body {
 /*     *********  BROCHES  ****************/
 
 .fotosBroches {
-	width: 80%;
+	width: 65%;
 	margin: 0 auto 40px;
 	display: grid;
 	grid-template-columns: 1fr 1fr;
@@ -399,12 +399,13 @@ body {
 
 /*     *********  BIO  ****************/
 
+
 #bio {
 	align-items: top;
     display: flex;
     min-height: 80vh;
 	margin: 0 auto 40px;
-	width: 80%;
+	width: 65%;
     
     .bio_left {
         width: 65%;
@@ -441,6 +442,28 @@ body {
     }
 }
 
+#footer {
+	background-color: #333;
+	color: white;
+	height: 140px;
+	width: 100%;
+
+	display: flex;
+	flex-direction: column;
+
+	.footer-top {
+		height: 80%;
+	}
+
+	.footer-bottom {
+		font-size: 20px;
+		letter-spacing: 5px;
+		font-family: 'Tangerine', cursive;
+		// font-family: 'Dawning of a New Day', cursive;
+		text-align: center;
+	}
+}
+
 @media screen and (max-width: 640px) {
 	.buttons {
 		grid-template-columns: 1fr;
@@ -452,6 +475,12 @@ body {
 	.hamburguesa {
 		width: min-content;
 		padding: 0 5px;
+	}
+}
+
+@media screen and (max-width: 1100px) {
+	.fotosBroches {
+		width: 80%;
 	}
 }
 
