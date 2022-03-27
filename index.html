@@ -8,6 +8,12 @@
     <!-- favicon -->
     <link rel="icon" href="./img/favicon-natyrocca.png" type="image/x-icon" />
 
+    <!-- fontawesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
     <!-- tipografias -->
     <!-- <link
       href="https://allfont.es/allfont.css?fonts=futura-normal"
@@ -30,7 +36,7 @@
       <img src="./img/recursos/triangle-up.ico" />
     </a>
 
-    <nav class="menu fc show">
+    <nav class="menu fc">
       <div class="hamburguesa fc" id="hamburguesa">
         <p>menú</p>
       </div>
@@ -261,6 +267,29 @@
         </div>
       </div>
 
+      <!-- MODAL DE FOTOS -->
+      <div class="preview-box">
+        <div class="details">
+          <!-- <span class="title">
+            imagen 
+            <p class="current-img"> 3 </p>
+            de 
+            <p class="total-img"> 6</p>
+          </span> -->
+          <span class="icon fas fa-times"></span>
+        </div>
+        <div class="img-box">
+            <div class="slide prev">
+                <i class="fas fa-angle-left"></i>
+            </div>
+            <div class="slide next">
+                <i class="fas fa-angle-right"></i>
+            </div>
+            <img src="" alt="">
+        </div>
+      </div>
+      <div class="shadow"></div>
+
       <div class="bio-wide">
         <div id="bio">
           <div class="bio_left">
@@ -305,7 +334,10 @@
     <footer id="footer">
       <div class="footer-top"></div>
       <div class="footer-bottom">
-        <p>"Río en otoño: de allí una piedra blanca llevé conmigo" - <span>Natsume Sōseki</span></p>
+        <p>
+          "Río en otoño: de allí una piedra blanca llevé conmigo" -
+          <span>Natsume Sōseki</span>
+        </p>
       </div>
     </footer>
 
@@ -313,6 +345,8 @@
     <script src="./js/script.js"></script>
     <!-- carousel -->
     <script src="./js/tintes.js"></script>
+    <!-- carousel -->
+    <script src="./js/lightbox.js"></script>
   </body>
 </html>
 

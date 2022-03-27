@@ -4,6 +4,8 @@ const links = document.querySelectorAll(".nav > ul > li");
 const menu = document.querySelector(".menu"); //Menu vendria a ser todo el menu. Es el selector mas abarcativo
 const nav = document.querySelector("#nav");
 
+
+/* MENU */
 window.addEventListener("DOMContentLoaded", (event) => {
   hideMenuButton();
 });
@@ -21,7 +23,6 @@ const hideMenuButton = () => {
   menu.style.opacity = "0";
   nav.classList.remove("show");
 };
-console.log("links", links);
 
 document.addEventListener("click", (e) => {
   if (
