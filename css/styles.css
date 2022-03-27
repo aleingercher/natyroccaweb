@@ -329,9 +329,9 @@ body {
   #footer .footer-top {
     height: 80%; }
   #footer .footer-bottom {
-    font-size: 20px;
-    letter-spacing: 5px;
-    font-family: 'Tangerine', cursive;
+    font-size: 16px;
+    font-weight: 100;
+    font-family: 'Forum', cursive;
     text-align: center; }
 
 @media screen and (max-width: 640px) {
@@ -424,3 +424,95 @@ body {
   line-height: 1.3;
   font-weight: 100;
   letter-spacing: 4px; }
+
+.container-modal {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  font-family: sans-serif; }
+  .container-modal img {
+    width: 100%;
+    display: block; }
+  .container-modal .img-container {
+    background-color: red;
+    position: relative; }
+    .container-modal .img-container:hover .content {
+      opacity: 1;
+      background: #00000033; }
+  .container-modal .content {
+    background: transparent;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 0.5s ease;
+    color: #fff;
+    opacity: 0; }
+    .container-modal .content .zoom-text {
+      width: 80px;
+      height: 80px;
+      background-color: pink;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      transition: transform 0.2s linear; }
+      .container-modal .content .zoom-text:hover {
+        cursor: zoom-in;
+        transform: scale(1.1); }
+    .container-modal .content h2 {
+      padding: 15px; }
+
+/* JS related */
+.image-view {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  background-color: #000000cc;
+  display: none; }
+
+.image-box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-size: cover;
+  height: 0;
+  width: 100%;
+  display: none;
+  background-repeat: no-repeat; }
+
+#prev-btn,
+#next-btn {
+  height: 0;
+  width: 0;
+  border: 20px solid transparent;
+  cursor: pointer;
+  position: absolute;
+  top: 50%; }
+  #prev-btn:hover,
+  #next-btn:hover {
+    opacity: 0.6; }
+
+#prev-btn {
+  border-right: 30px solid #0c0606;
+  transform: translateX(-60px); }
+
+#next-btn {
+  border-left: 30px solid white;
+  transform: translateX(60px); }
+
+@media (max-width: 992px) {
+  .container-modal {
+    grid-template-columns: 1fr; }
+  .image-box {
+    height: 55vh; } }
+
+@media (max-width: 678px) {
+  .image-box {
+    height: 40vh; } }

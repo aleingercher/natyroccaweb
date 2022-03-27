@@ -11,6 +11,7 @@ a {
 	color: inherit;
 }
 
+
 body {
 	font-family: 'Cormorant Garamond', serif;
 
@@ -456,10 +457,9 @@ body {
 	}
 
 	.footer-bottom {
-		font-size: 20px;
-		letter-spacing: 5px;
-		font-family: 'Tangerine', cursive;
-		// font-family: 'Dawning of a New Day', cursive;
+		font-size: 16px;
+		font-weight: 100;
+		font-family: 'Forum', cursive;
 		text-align: center;
 	}
 }

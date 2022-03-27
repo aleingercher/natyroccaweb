@@ -1,3 +1,4 @@
+
 /* Menu vendria a ser todo el menu. Es el selector mas abarcativo */
 const menu = document.querySelector(".menu");
 const hamburguesa = document.querySelector(".hamburguesa");
