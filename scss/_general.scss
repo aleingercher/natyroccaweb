@@ -290,6 +290,7 @@ body {
 	display: grid;
 	grid-template-columns: 40px 40px auto 25px 70px 100px auto 30px 40px;
 	grid-template-rows: 20px 1fr auto 50px 100px 40px auto minmax(30px, auto) 40px auto;
+	cursor: pointer;
 
 	img {
 		object-fit: cover;
@@ -330,6 +331,7 @@ body {
 /*     *********  ILUSTRACIONES  ****************/
 
 .fotosIlustraciones {
+	cursor: pointer;
 	padding: 0 40px 30px;
 	display: grid;
 
