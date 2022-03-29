@@ -215,6 +215,7 @@ body {
     object-fit: cover;
     width: 100%; }
   .fotosTextiles .textiles-principal {
+    filter: contrast(145%);
     height: 100%;
     grid-area: span 2 / span 2; }
 
@@ -324,7 +325,7 @@ body {
         margin-bottom: 10px; }
       #bio .bio_left .bio_left_bottom img {
         max-height: 10rem; }
-  #bio > img {
+  #bio .bio_right {
     width: 35%;
     object-fit: cover; }
 
@@ -352,18 +353,48 @@ body {
   .fotosIlustraciones,
   .fotosMuniecos {
     width: 100%; }
-  #bio .bio_right {
-    margin: auto 0;
-    height: 100%; } }
+  #bio {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%; }
+    #bio .bio_left {
+      margin: 20px;
+      order: 2;
+      width: calc(100% - 40px); }
+      #bio .bio_left .bio_left_top {
+        font-size: 1.3rem; }
+        #bio .bio_left .bio_left_top span {
+          font-size: 1.9rem;
+          font-weight: 400; }
+      #bio .bio_left .bio_left_bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0; }
+        #bio .bio_left .bio_left_bottom a {
+          margin-bottom: 10px; }
+        #bio .bio_left .bio_left_bottom img {
+          float: right;
+          max-height: 10rem; }
+    #bio .bio_right {
+      order: 1;
+      height: 50vh;
+      width: 100%;
+      object-fit: cover; } }
 
 @media screen and (max-width: 640px) {
   .buttons {
     grid-template-columns: 1fr; }
+    .buttons p {
+      opacity: 1 !important; }
     .buttons :last-child {
       grid-column: span 1; }
   .hamburguesa {
     width: min-content;
     padding: 0 5px; }
+  #muniecos {
+    margin-bottom: 0; }
   .fotosMuniecos,
   .fotosIlustraciones {
     display: flex;

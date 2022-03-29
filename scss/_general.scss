@@ -272,9 +272,11 @@ body {
   img {
     object-fit: cover;
     width: 100%;
+
   }
 
   .textiles-principal {
+    filter: contrast(145%);
     height: 100%;
     grid-area: span 2 / span 2;
   }
@@ -435,7 +437,7 @@ body {
       }
     }
   }
-  & > img {
+  .bio_right {
     width: 35%;
     object-fit: cover;
   }
@@ -479,9 +481,45 @@ body {
   }
 
   #bio {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    width: 100%;
+
+    .bio_left {
+        margin: 20px;
+        order: 2;
+        width: calc(100% - 40px);
+
+      .bio_left_top {
+        font-size: 1.3rem;
+
+        span {
+          font-size: 1.9rem;
+          font-weight: 400;
+        }
+      }
+      .bio_left_bottom {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-right: 0;
+
+        a {
+          margin-bottom: 10px;
+        }
+
+        img {
+          float: right;
+          max-height: 10rem;
+        }
+      }
+    }
     .bio_right {
-        margin: auto 0;
-        height: 100%;
+      order: 1;
+      height: 50vh;
+      width: 100%;
+      object-fit: cover;
     }
   }
 }
@@ -490,6 +528,10 @@ body {
   .buttons {
     grid-template-columns: 1fr;
 
+    p {
+        opacity: 1 !important;
+    }
+
     :last-child {
       grid-column: span 1;
     }
@@ -497,6 +539,10 @@ body {
   .hamburguesa {
     width: min-content;
     padding: 0 5px;
+  }
+
+  #muniecos {
+      margin-bottom: 0;
   }
 
   .fotosMuniecos,
