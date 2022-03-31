@@ -168,7 +168,8 @@ body {
       position: absolute;
       top: 50%;
       transform: translate(-50%, 70%);
-      transition: all 0.5s ease-in; }
+      transition: all 0.3s ease-in;
+      white-space: nowrap; }
     .buttons .button:hover p {
       transition: all 0.8s ease-out;
       transform: translate(-50%, 50%);
@@ -362,8 +363,11 @@ body {
 @media screen and (max-width: 640px) {
   .buttons {
     grid-template-columns: 1fr; }
-    .buttons p {
-      opacity: 1 !important; }
+    .buttons .button p {
+      color: white;
+      text-shadow: 11px 11px 15px 13px black;
+      top: 40%;
+      opacity: 1; }
     .buttons :last-child {
       grid-column: span 1; }
   .hamburguesa {
