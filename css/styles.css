@@ -10,7 +10,7 @@ a {
   color: inherit; }
 
 body {
-  font-family: "Cormorant Garamond", serif;
+  font-family: 'Cormorant Garamond', serif;
   scrollbar-width: thin;
   /* "auto" or "thin" */ }
   body::-webkit-scrollbar {
@@ -31,7 +31,7 @@ body {
 
 /*  tipografia FRUTO */
 .fruto {
-  font-family: "Futura-Normal", arial;
+  font-family: 'Futura-Normal', arial;
   color: #111111; }
 
 /* BACK TO TOP BUTTON */
@@ -340,7 +340,7 @@ body {
     height: 80%; }
   #footer .footer-bottom {
     font-size: 20px;
-    font-family: "Hina Mincho", serif;
+    font-family: 'Hina Mincho', serif;
     letter-spacing: 2px;
     margin-bottom: 1rem;
     text-align: center; }
@@ -353,6 +353,39 @@ body {
   .fotosIlustraciones,
   .fotosMuniecos {
     width: 100%; }
+  #bio {
+    width: 80%; }
+    #bio .bio_right {
+      width: 50%;
+      object-fit: cover; } }
+
+@media screen and (max-width: 640px) {
+  .buttons {
+    grid-template-columns: 1fr; }
+    .buttons p {
+      opacity: 1 !important; }
+    .buttons :last-child {
+      grid-column: span 1; }
+  .hamburguesa {
+    width: min-content;
+    padding: 0 5px; }
+  #muniecos {
+    margin-bottom: 0; }
+  .fotosMuniecos,
+  .fotosIlustraciones {
+    display: flex;
+    height: 100vh;
+    overflow-x: scroll;
+    padding: 0; }
+    .fotosMuniecos::-webkit-scrollbar,
+    .fotosIlustraciones::-webkit-scrollbar {
+      height: 0px;
+      width: 0;
+      /* width of the entire scrollbar */ }
+    .fotosMuniecos img,
+    .fotosIlustraciones img {
+      height: 100% !important;
+      width: auto; }
   #bio {
     display: flex;
     flex-direction: column;
@@ -382,34 +415,6 @@ body {
       height: 50vh;
       width: 100%;
       object-fit: cover; } }
-
-@media screen and (max-width: 640px) {
-  .buttons {
-    grid-template-columns: 1fr; }
-    .buttons p {
-      opacity: 1 !important; }
-    .buttons :last-child {
-      grid-column: span 1; }
-  .hamburguesa {
-    width: min-content;
-    padding: 0 5px; }
-  #muniecos {
-    margin-bottom: 0; }
-  .fotosMuniecos,
-  .fotosIlustraciones {
-    display: flex;
-    height: 100vh;
-    overflow-x: scroll;
-    padding: 0; }
-    .fotosMuniecos::-webkit-scrollbar,
-    .fotosIlustraciones::-webkit-scrollbar {
-      height: 0px;
-      width: 0;
-      /* width of the entire scrollbar */ }
-    .fotosMuniecos img,
-    .fotosIlustraciones img {
-      height: 100% !important;
-      width: auto; } }
 
 /* grilla tintes vieja */
 /* carousel */
