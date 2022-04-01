@@ -3,7 +3,7 @@
   0% {
     transform: translateX(0px); }
   100% {
-    transform: translateX(20px); } }
+    transform: translateX(-500%); } }
 
 * {
   margin: 0;
@@ -70,18 +70,7 @@ body {
 
 /* FLECHITAS */
 .flechitas {
-  filter: invert(1);
-  right: 20px;
-  position: absolute;
-  top: 50%;
-  animation-name: animateArrow;
-  animation-duration: 0.5s;
-  animation-iteration-count: infinite;
-  animation-direction: alternate; }
-
-.flecha2 {
-  display: none;
-  transform: translate(-50%); }
+  display: none; }
 
 .main {
   width: 100%; }
@@ -383,6 +372,17 @@ body {
       object-fit: cover; } }
 
 @media screen and (max-width: 640px) {
+  /* FLECHITAS */
+  .flechitas {
+    display: block;
+    filter: invert(1);
+    right: 5%;
+    position: absolute;
+    top: 50%;
+    animation-name: animateArrow;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-direction: forward; }
   .buttons {
     grid-template-columns: 1fr; }
     .buttons .button p {
@@ -395,6 +395,8 @@ body {
   .hamburguesa {
     width: min-content;
     padding: 0 5px; }
+  .hamburguesa.hideLetters {
+    background: none; }
   #muniecos {
     margin-bottom: 0; }
   .fotosMuniecos,
