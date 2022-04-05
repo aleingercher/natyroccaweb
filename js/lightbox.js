@@ -9,8 +9,6 @@ const fotosBroches = document.querySelectorAll(".fotosBroches > img"),
   closeIcon = previewBox.querySelector(".fa-times"),
   shadow = document.querySelector(".shadow");
 
-document.querySelectorAll(".bio-wide div:not([class*='left'").forEach((e) => console.log(e));
-console.log(imgContainer);
 window.onload = () => {
   const carouselDeFotos = (section) => {
     for (let i = 0; i < section.length; i++) {
