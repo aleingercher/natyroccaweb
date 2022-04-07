@@ -86,3 +86,23 @@ const topFunction = () => {
   document.body.scrollTop = 0; // For Safari
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
+
+
+/* SCROLL SMOOTH */
+/* const buttons = document.querySelectorAll(".button a");
+ 
+for (const button of buttons) {
+    button.addEventListener("click", clickHandler);
+}
+ 
+function clickHandler(e) {
+  e.preventDefault();
+  const href = this.getAttribute("href");
+  console.log(this)
+  const offsetTopp = document.querySelector(href).offsetTop;
+ 
+  scroll({
+    top: offsetTopp,
+    behavior: "smooth"
+  });
+} */
