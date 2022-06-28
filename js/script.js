@@ -111,7 +111,6 @@ const changeQuote = (day) => {
             autor.innerHTML = "Natsume Sōseki";
             break;
     }
-  console.log("new Date()", day);
 };
 
 /* SCROLL SMOOTH */

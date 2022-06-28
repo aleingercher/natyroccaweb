@@ -614,12 +614,12 @@ body {
 
   #footer {
       
-    .footer-bottom {
-        flex-direction: column;
-        margin: 0 2ch;
-
-        .footer__separator {
-            display: none;
+      .footer-bottom {
+          flex-direction: column;
+          margin: 0 4em 1em 2ch;
+          
+          .footer__separator {
+              display: none;
         }
     }
   }

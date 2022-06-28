@@ -451,7 +451,7 @@ body {
       object-fit: cover; }
   #footer .footer-bottom {
     flex-direction: column;
-    margin: 0 2ch; }
+    margin: 0 4em 1em 2ch; }
     #footer .footer-bottom .footer__separator {
       display: none; } }
 
