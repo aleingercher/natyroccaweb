@@ -3,10 +3,11 @@ const hamburguesaButton = document.querySelector(".hamburguesa > p");
 const links = document.querySelectorAll(".nav > ul > li");
 const menu = document.querySelector(".menu"); //Menu vendria a ser todo el menu. Es el selector mas abarcativo
 const nav = document.querySelector("#nav");
-
+const todayDay = new Date().getDate(); // dia para la frase del footer
 
 /* MENU */
 window.addEventListener("DOMContentLoaded", (event) => {
+  changeQuote(4);
   hideMenuButton();
 });
 
@@ -87,6 +88,31 @@ const topFunction = () => {
   document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 };
 
+/* FRASES footer */
+const changeQuote = (day) => {
+  const frase = document.querySelector(".footer__frase");
+  const autor = document.querySelector(".footer__autor");
+
+  switch (true) {
+      case day > 20:
+            frase.innerHTML = "Tejado gélido: acá y allá retozan algunos pájaros.";
+            autor.innerHTML = "Natsume Sōseki";
+            break;
+      case day > 13:
+            frase.innerHTML = "Viento Invernal: volviendo y revolviéndonse despierta ecos.";
+            autor.innerHTML = "Natsume Sōseki";
+            break;
+      case day > 21:
+            frase.innerHTML = "Sin más, de frío se encoje el vasto cielo, se limpia el agua.";
+            autor.innerHTML = "Natsume Sōseki";
+            break;
+        default:
+            frase.innerHTML = "También cuando te quejas del frió contra tu piel, te siento muy humana.";
+            autor.innerHTML = "Natsume Sōseki";
+            break;
+    }
+  console.log("new Date()", day);
+};
 
 /* SCROLL SMOOTH */
 /* const buttons = document.querySelectorAll(".button a");

@@ -263,6 +263,21 @@ body {
     grid-row: 9/11; }
 
 /*     *********  ILUSTRACIONES  ****************/
+.t {
+  width: 100%;
+  height: 40vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: ". p" "g ."; }
+
+.p {
+  background-color: lightblue;
+  grid-area: p; }
+
+.g {
+  grid-area: g;
+  background-color: pink; }
+
 .fotosIlustraciones {
   display: grid;
   margin: 0 auto;
@@ -358,9 +373,14 @@ body {
     letter-spacing: 2px;
     margin-bottom: 1rem;
     text-align: center; }
-    #footer .footer-bottom span {
+    #footer .footer-bottom .footer__separator {
+      margin: 0 1ch; }
+    #footer .footer-bottom .footer__autor {
       font-size: 16px; }
 
+/* ******************* */
+/*     MEDIA QUERIES   */
+/* ******************* */
 @media screen and (max-width: 1100px) {
   .fotosBroches {
     width: 80%; }
@@ -408,11 +428,13 @@ body {
     height: 100vh;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: 0; }
+    padding: 0;
+    scroll-snap-type: x mandatory; }
     .fotosMuniecos img,
     .fotosIlustraciones img {
       height: 100% !important;
-      width: auto; }
+      width: auto;
+      scroll-snap-align: start; }
   #bio {
     display: flex;
     flex-direction: column;
@@ -441,9 +463,13 @@ body {
       order: 1;
       height: 50vh;
       width: 100%;
-      object-fit: cover; } }
+      object-fit: cover; }
+  #footer .footer-bottom {
+    flex-direction: column;
+    margin: 0 2ch; }
+    #footer .footer-bottom .footer__separator {
+      display: none; } }
 
-/* grilla tintes vieja */
 /* carousel */
 .carousel_inner {
   width: 100%;
