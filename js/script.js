@@ -94,23 +94,26 @@ const changeQuote = (day) => {
   const autor = document.querySelector(".footer__autor");
 
   switch (true) {
-      case day > 20:
-            frase.innerHTML = "Tejado gélido: acá y allá retozan algunos pájaros.";
-            autor.innerHTML = "Natsume Sōseki";
-            break;
-      case day > 13:
-            frase.innerHTML = "Viento Invernal: volviendo y revolviéndonse despierta ecos.";
-            autor.innerHTML = "Natsume Sōseki";
-            break;
-      case day > 21:
-            frase.innerHTML = "Sin más, de frío se encoje el vasto cielo, se limpia el agua.";
-            autor.innerHTML = "Natsume Sōseki";
-            break;
-        default:
-            frase.innerHTML = "También cuando te quejas del frió contra tu piel, te siento muy humana.";
-            autor.innerHTML = "Natsume Sōseki";
-            break;
-    }
+    case day > 20:
+      frase.innerHTML = "Tejado gélido: acá y allá retozan algunos pájaros.";
+      autor.innerHTML = "Natsume Sōseki";
+      break;
+    case day > 13:
+      frase.innerHTML =
+        "Viento Invernal: volviendo y revolviéndonse despierta ecos.";
+      autor.innerHTML = "Natsume Sōseki";
+      break;
+    case day > 21:
+      frase.innerHTML =
+        "Sin más, de frío se encoje el vasto cielo, se limpia el agua.";
+      autor.innerHTML = "Natsume Sōseki";
+      break;
+    default:
+      frase.innerHTML =
+        "También cuando te quejas del frió contra tu piel, te siento muy humana.";
+      autor.innerHTML = "Natsume Sōseki";
+      break;
+  }
 };
 
 /* SCROLL SMOOTH */
